@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incrémenter un Nombre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2rem;
+            color: #007BFF;
+        }
+        #counter {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Incrémenter un Nombre</h1>
+        <div id="counter">0</div>
+        <button onclick="incrementCounter()">Incrémenter</button>
+        <button onclick="resetCounter()">Réinitialiser</button>
+    </div>
+
+    <script>
+        let counter = 0;
+
+        function incrementCounter() {
+            counter++;
+            document.getElementById('counter').innerText = counter;
+        }
+
+        function resetCounter() {
+            counter = 0;
+            document.getElementById('counter').innerText = counter;
+        }
+    </script>
+</body>
+</html>
